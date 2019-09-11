@@ -12,3 +12,11 @@ this automation is focused on creating below aws resources
 7. install jenkins and ansible on public_subnet machine.
 
 all files are under terraform/terraform-vpc
+
+Note: assign aws ec2_role to the bastion/jump ec2 machine instead of aws configure, avoid to configure aws credential and use IAM Role
+
+AWS IAM Role for bastion/jump ec2 instance.
+
+- Create role (ec2-role)
+- Role description : Allows EC2 instances to call AWS services on your behalf
+- Attach Policy: AdministratorAccess
